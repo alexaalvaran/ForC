@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.navBar{
+    background-color: #edaaba;
+    color: white;
+  }
