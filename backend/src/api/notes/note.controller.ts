@@ -34,7 +34,7 @@ export class NoteController{
     @Get('/:id')
     async findNote(@Param('id') id:string){
         try{
-            this.noteService.findOne(id);
+            return this.noteService.findOne(id);
         } catch{
             throw new HttpException(
                 {

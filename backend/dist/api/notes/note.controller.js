@@ -34,7 +34,7 @@ let NoteController = class NoteController {
     }
     async findNote(id) {
         try {
-            this.noteService.findOne(id);
+            return this.noteService.findOne(id);
         }
         catch {
             throw new common_1.HttpException({

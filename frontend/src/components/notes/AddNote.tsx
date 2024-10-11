@@ -11,10 +11,14 @@ const NewNoteComponent= () => {
         setNote({...note,[event.target.name]: event.target.value});
     };
 
+    const onChangeText = (event: ChangeEvent<HTMLTextAreaElement>) => {
+        setNote({...note,[event.target.name]: event.target.value});
+    };
+
     const onSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        
-        fetch(process.env.backendURL + `/api/notes`,
+
+        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/notes',
             {method: 'POST',
                 headers:{"Content-Type":"application/json" },
                 body: JSON.stringify(note),
@@ -30,47 +34,42 @@ const NewNoteComponent= () => {
 
     return(
         <div className="NewNote">
-            <div className="container">
-                <div className="row">
-                    <div className="flex-col m-auto">
-                        <h1 className="titleText display-4 text-center">
+
+                        <h1 className="titleText">
                             add a new note
                         </h1>
-                        <form noValidate onSubmit={onSubmit}>
+                        <form onSubmit={onSubmit}>
                             <div className="form-group">
-                                <h3> title </h3>
+                                <h3 className="inputNoteTitle"> title </h3>
                                 <input
                                 type="text"
                                 placeholder="..."
                                 name="title"
-                                className="form-control"
+                                className="inputNoteBox form-control"
                                 value={note.title}
                                 onChange = {onChange}
                                 />
                             </div>
                             <br />
                             <div className="form-group">
-                                <h3>note</h3>
-                                <input
-                                type="text"
+                                <h3 className="inputNoteTitle">note</h3>
+                                <textarea
                                 placeholder="..."
                                 name="note"
-                                className="form-control"
+                                className="inputNoteBox"
                                 value={note.note}
-                                onChange = {onChange}
+                                onChange = {onChangeText}
+                                rows={6}
                                 />
                             </div>
                             <button
                             type="submit"
-                            className= "btn btn-outline-warning btn-block mt-4 mb-4 w-100 items-center"
+                            className= "submitNewNote"
                             >
                                 add note :)
                             </button>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
     )
 }
 
