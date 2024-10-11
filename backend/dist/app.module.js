@@ -14,6 +14,7 @@ const mongoose_1 = require("@nestjs/mongoose");
 const config_1 = require("@nestjs/config");
 const user_module_1 = require("./api/user/user.module");
 const note_module_1 = require("./api/notes/note.module");
+const food_module_1 = require("./api/food/food.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,6 +25,7 @@ exports.AppModule = AppModule = __decorate([
             mongoose_1.MongooseModule.forRoot(process.env.DB_URI),
             user_module_1.UserModule,
             note_module_1.NoteModule,
+            food_module_1.FoodModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

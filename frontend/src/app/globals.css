@@ -8,7 +8,7 @@
     color: white;
   }
 
-  .submitNewNote{
+  .submitNewNote, .submitNewFood{
     background-color: #edaaba;
     color: white;
     border-radius: 10%;
@@ -24,18 +24,18 @@
     font-weight: 500;
   }
 
-  .inputNoteBox{
+  .inputNoteBox, .inputFoodBox{
     width: 50%;
     border: 1px #edaaba;
     border-style: solid;
   }
 
-  .inputNoteTitle{
+  .inputNoteTitle, .inputFood{
     color:#edaaba;
     font-size: large;
   }
 
-  .NewNote{
+  .NewNote, .NewFood{
 
     align-items: center;
     text-align: center;
