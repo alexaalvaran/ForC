@@ -2,7 +2,6 @@ import React, {useState, useEffect, ChangeEvent, FormEvent, ChangeEventHandler} 
 import { useParams, useRouter } from "next/navigation";
 import {Food, DefaultFood} from './Food';
 import Link from "next/link";
-import food from "@/app/food/page";
 
 function UpdateFoodInfo() {
     const[food, setFood] = useState<Food>(DefaultFood);
@@ -53,19 +52,21 @@ return(
             <div className='row'>
                 <div className='col-md-8 m-auto'>
                     <br />
-                    <Link href='/food' className='ourFoodbtn btn-outline-warning float-left'>
+                    <Link href='/food' className='ourFoodbtn btn-outline-warning float-right'>
                     our food places
                     </Link>
                 </div>
+                <br/><br /> <br/>
                 <div className='col-md-8 m-auto'>
                     <form noValidate onSubmit={onSubmit}>
                         <div className='form-group'>
-                            <label htmlFor='place'>Place</label>
+                            <label className='inputFood' htmlFor='place'>place</label>
+                            <br/>
                             <input
                             type='text'
                             placeholder='...'
                             name='place'
-                            className='form-control'
+                            className='inputFoodBox form-control'
                             value={food.place}
                             onChange={inputOnChange}
                             />
@@ -73,12 +74,13 @@ return(
                         <br />
 
                         <div className='form-group'>
-                            <label htmlFor='location'>Location</label>
+                            <label className='inputFood' htmlFor='location'>location</label>
+                            <br />
                             <input
                             type='text'
                             placeholder='...'
                             name='location'
-                            className='form-control'
+                            className='inputFoodBox form-control'
                             value={food.location}
                             onChange={inputOnChange}
                             />
@@ -86,12 +88,13 @@ return(
                         <br />
 
                         <div className='form-group'>
-                            <label htmlFor='cuisine'>Location</label>
+                            <label className='inputFood' htmlFor='cuisine'>cuisine</label>
+                            <br/>
                             <input
                             type='text'
                             placeholder='...'
                             name='cuisine'
-                            className='form-control'
+                            className='inputFoodBox form-control'
                             value={food.cuisine}
                             onChange={inputOnChange}
                             />
@@ -99,12 +102,13 @@ return(
                         <br />
 
                         <div className='form-group'>
-                            <label htmlFor='rating'>Location</label>
+                            <label className='inputFood' htmlFor='rating'>rating</label>
+                            <br/>
                             <input
                             type='text'
                             placeholder='...'
                             name='rating'
-                            className='form-control'
+                            className='inputFoodBox form-control'
                             value={food.cuisine}
                             onChange={inputOnChange}
                             />
@@ -112,20 +116,22 @@ return(
                         <br />
 
                         <div className='form-group'>
-                            <label htmlFor='review'>Location</label>
+                            <label className='inputFood' htmlFor='review'>review</label>
+                            <br/>
                             <textarea
                             placeholder='...'
                             name='review'
-                            className='form-control'
+                            className='inputFoodBox form-control'
                             value={food.review}
                             onChange={textAreaOnChange}
+                            rows={6}
                             />
                         </div>
                         <br />
 
                         <button
                         type='submit'
-                        className='submitBtn btn-outline-info btn-lg btn-block'
+                        className='updateFoodbtn btn-outline-info btn-lg btn-block'
                         >
                             update place
                         </button>

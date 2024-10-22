@@ -29,6 +29,7 @@ function ShowFoodList() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
+                            <br />
                             <h2 className="showFoodTitle btn-outline">
                                 food places :)!
                             </h2>

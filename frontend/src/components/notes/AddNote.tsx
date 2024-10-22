@@ -34,10 +34,12 @@ const NewNoteComponent= () => {
 
     return(
         <div className="NewNote">
-
-                        <h1 className="titleText">
-                            add a new note
-                        </h1>
+            <div className='container'>
+            <div className='row'>
+                <div className='col-md-8 m-auto'>
+                  <h1 className='titleText'>add a new note</h1>
+                </div>
+                <div className='col-md-8 m-auto'></div>
                         <form onSubmit={onSubmit}>
                             <div className="form-group">
                                 <h3 className="inputNoteTitle"> title </h3>
@@ -62,6 +64,8 @@ const NewNoteComponent= () => {
                                 rows={6}
                                 />
                             </div>
+                            <br/> <br/>
+                    
                             <button
                             type="submit"
                             className= "submitNewNote"
@@ -69,6 +73,8 @@ const NewNoteComponent= () => {
                                 add note :)
                             </button>
                         </form>
+                    </div>
+                    </div>
                     </div>
     )
 }

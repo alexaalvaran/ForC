@@ -29,6 +29,7 @@ function ShowNotes() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
+                        <br/>
                     <h2 className='showNotesTitle display-4 text-center'>
                         our notes
                     </h2>

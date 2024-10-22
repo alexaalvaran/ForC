@@ -33,7 +33,7 @@ export class FoodController{
         }
     }
 
-    @Get(':/id')
+    @Get('/:id')
     async findFood(@Param('id') id:string){
         try{
             return this.foodService.findOne(id);
@@ -98,5 +98,4 @@ export class FoodController{
             );
         }
     }
-
 }

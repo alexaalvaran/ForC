@@ -8,7 +8,7 @@
     color: white;
   }
 
-  .submitNewNote, .submitNewFood{
+  .submitNewNote, .submitNewFood, .updateFoodbtn, .deleteFoodbtn{
     background-color: #edaaba;
     color: white;
     border-radius: 10%;
@@ -28,6 +28,7 @@
     width: 50%;
     border: 1px #edaaba;
     border-style: solid;
+    color: #5A5A5A;
   }
 
   .inputNoteTitle, .inputFood{
@@ -35,13 +36,14 @@
     font-size: large;
   }
 
-  .NewNote, .NewFood{
-
+  .NewNote, .NewFood, .UpdateFood, .FoodDetails{
+    display:flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
   }
 
-  .newNotebtn{
+  .newNotebtn, .newFoodbtn{
     width: 10%;
     background-color: #edaaba;
     color: white;
@@ -65,7 +67,7 @@
     transform: scale(3.5);
 }
 
-.note-title, .note-content, .food-title, .food-content{
+.note-title, .note-content, .food-card-title, .food-content{
   color: white;
 }
 
@@ -106,4 +108,18 @@
   color: white;
   text-align: center;
 }
+
+table {
+  border: 2px solid #edaaba;
+  border-collapse: collapse;
+  width: 50%;
+  color: #5A5A5A;
+
+}
+
+td {
+  border: 2px solid #edaaba;
+  padding: 8px;
+}
+
 

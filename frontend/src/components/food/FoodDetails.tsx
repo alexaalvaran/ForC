@@ -34,9 +34,13 @@ function FoodDetails() {
         });
     };
 
+    const onUpdateClick = () => {
+        navigate.push(`/editFood/${food._id}`);
+    }
+
     const FoodItem = (
-        <div>
-            <table className='foodTable table-hove table-dark-table-striped table-bordered'>
+        <div className="FoodDetails">
+            <table>
                 <tbody>
                     <tr>
                         <td>place</td>
@@ -68,14 +72,26 @@ function FoodDetails() {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-10 m-auto'>
+                        <br/ > <br />
+                    <Link href='/food' className='ourFoodbtn btn-outline-warning float-right'>
+                        our food places
+                        </Link>
+                        <br/> <br />
                         <div className = 'foodItem'>
                             {FoodItem}
                         </div>
                         <br /><br />
-                        <Link href='/food' className='ourFoodbtn btn-outline-warning float-right'>
-                        our food places
-                        </Link>
                     </div>
+                    <div className='col-md-6 m-auto'>
+                    <button
+                        type='button'
+                        className='updateFoodbtn btn-outline-danger btn-lg btn-block'
+                        onClick={onUpdateClick}
+                        >
+                            edit place
+                        </button>
+                    </div>
+                    <br />
                     <div className='col-md-6 m-auto'>
                         <button
                         type='button'
@@ -86,14 +102,6 @@ function FoodDetails() {
                         >
                             delete place
                         </button>
-                    </div>
-                    <div className='col-md-6 m-auto'>
-                        <Link
-                        href={'/editFood/${food._id}'}
-                        className='editFoodbtn btn-outline-info btn-lg btn-block'
-                        >
-                            edit food
-                        </Link>
                     </div>
                 </div>
             </div>

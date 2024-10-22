@@ -33,10 +33,13 @@ const NewFoodComponent = () => {
     };
 
     return(
-        <div className="NewFood">
-            <h1 className="titleText">
-                add a new food place
-            </h1>
+        <div className="NewFood"> 
+            <div className='container'>
+            <div className='row'>
+                <div className='col-md-8 m-auto'>
+                  <h1 className='titleText'>add a new food place</h1>
+                </div>
+                <div className='col-md-8 m-auto'></div>
             <form onSubmit = {onSubmit}>
                 <div className = "form-group">
                     <h3 className="inputFood">place</h3>
@@ -98,6 +101,7 @@ const NewFoodComponent = () => {
                     rows={6}
                     />
                 </div>
+                <br/>
                 <button
                 type="submit"
                 className="submitNewFood"
@@ -105,6 +109,8 @@ const NewFoodComponent = () => {
                     add new place 
                 </button>
             </form>
+        </div>
+        </div>
         </div>
     )
 
