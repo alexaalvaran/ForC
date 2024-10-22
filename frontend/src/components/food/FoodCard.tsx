@@ -20,10 +20,9 @@ const FoodCard = ({food}: IProp) => {
     return(
         <div className='food-card text-center' onClick = {onClick}>
             <h1 className='food-card-title'>{food.place}</h1>
-            <h2 className='food-content'>{food.location}</h2>
-            <h3 className='food-content'>{food.cuisine}</h3>
-            <h4 className='food-content'>{food.rating}</h4>
-            <h4 className='food-content'>{food.review}</h4>
+            <h3 className='food-content'>{food.location}</h3>
+            <h5 className='food-content'>{food.rating}</h5>
+
         </div>
     );
 };

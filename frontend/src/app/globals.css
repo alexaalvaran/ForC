@@ -49,7 +49,7 @@
     border-radius: 20%;
   }
 
-  .note-card {
+  .note-card, .food-card {
     background-color: #edaaba;
     border: 2px solid #edaaba;
     border-radius: 8px;
@@ -61,34 +61,34 @@
     cursor: pointer;
 }
 
-.note-card:hover {
+.note-card:hover{
     transform: scale(3.5);
 }
 
-.note-title, .note-content{
+.note-title, .note-content, .food-title, .food-content{
   color: white;
 }
 
-.showNotesTitle {
+.showNotesTitle, .showFoodTitle{
     color: #edaaba;
     font-size: x-large;
     font-weight: 500;
 }
 
-.ShowNotes {
+.ShowNotes, .ShowFood{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.notes {
+.notes, .food{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
 }
 
-.noteItem {
+.noteItem, .fodItem{
   background-color: #edaaba;
   border: 2px solid #ff85b3;;
   color: white;
@@ -99,7 +99,7 @@
   display: inline-block;
 }
 
-.ourNotesbtn
+.ourNotesbtn, .ourFoodbtn
 {
   width: 20%;
   background-color: #edaaba;
