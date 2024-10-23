@@ -8,7 +8,7 @@
     color: white;
   }
 
-  .submitNewNote, .submitNewFood, .updateFoodbtn, .deleteFoodbtn, .submitNewDate, .deleteDatebtn, .updateDatebtn{
+  .submitNewNote, .submitNewFood, .updateFoodbtn, .deleteFoodbtn, .submitNewDate, .deleteDatebtn, .updateDatebtn, .submitNewPhoto{
     background-color: #edaaba;
     color: white;
     border-radius: 10%;
@@ -24,19 +24,19 @@
     font-weight: 500;
   }
 
-  .inputNoteBox, .inputFoodBox, .inputDateBox{
+  .inputNoteBox, .inputFoodBox, .inputDateBox, .inputPhotoBox{
     width: 50%;
     border: 1px #edaaba;
     border-style: solid;
     color: #5A5A5A;
   }
 
-  .inputNoteTitle, .inputFood, .inputDate{
+  .inputNoteTitle, .inputFood, .inputDate, .inputPhoto{
     color:#edaaba;
     font-size: large;
   }
 
-  .NewNote, .NewFood, .UpdateFood, .FoodDetails, .DatesDetails, .UpdateDates, .NewDate{
+  .NewNote, .NewFood, .UpdateFood, .FoodDetails, .DatesDetails, .UpdateDates, .NewDate, .NewPhoto{
     display:flex;
     justify-content: center;
     align-items: center;
