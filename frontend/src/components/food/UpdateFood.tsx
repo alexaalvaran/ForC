@@ -44,7 +44,7 @@ function UpdateFoodInfo() {
         .catch((err) => {
             console.log('error from update food' + err);
         });
-    };;
+    };
 
 return(
     <div className='UpdateFood'>
