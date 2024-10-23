@@ -39,7 +39,6 @@ const NewFoodComponent = () => {
                 <div className='col-md-8 m-auto'>
                   <h1 className='titleText'>add a new food place</h1>
                 </div>
-                <div className='col-md-8 m-auto'></div>
             <form onSubmit = {onSubmit}>
                 <div className = "form-group">
                     <h3 className="inputFood">place</h3>
