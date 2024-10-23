@@ -109,7 +109,7 @@ return(
                             placeholder='...'
                             name='rating'
                             className='inputFoodBox form-control'
-                            value={food.cuisine}
+                            value={food.rating}
                             onChange={inputOnChange}
                             />
                         </div>

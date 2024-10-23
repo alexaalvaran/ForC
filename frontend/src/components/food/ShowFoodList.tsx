@@ -30,7 +30,7 @@ function ShowFoodList() {
             food.place.toLowerCase().includes(lowerCaseQuery) ||
             food.cuisine.toLowerCase().includes(lowerCaseQuery) ||
             food.location.toLowerCase().includes(lowerCaseQuery) ||
-            food.rating.includes(lowerCaseQuery)
+            food.rating.match(lowerCaseQuery)
         );
        });
        setFilteredFood(filtered);
